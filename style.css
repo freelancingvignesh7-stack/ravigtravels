@@ -241,7 +241,7 @@ body{
 
   /* Reduce top spacing (avoid huge gap) */
   body {
-    padding-top: 118px !important;
+    padding-top: 80px !important;
   }
 
   /* Fix floating buttons */
@@ -643,3 +643,4 @@ body{
   .stat-value { font-size: 22px; }
   .stat-label { font-size: 12px; }
 }
+
