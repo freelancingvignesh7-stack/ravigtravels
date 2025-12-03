@@ -20,7 +20,7 @@
 body{
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue";
   margin:0;
-  padding-top: 70px !important; /* FIXED HEADER PUSH */
+  padding-top: 90px !important; /* FIXED HEADER PUSH */
   background: linear-gradient(180deg,#f9ffff 0,#eefafa 100%);
   color:var(--dark);
   -webkit-font-smoothing:antialiased;
@@ -241,7 +241,7 @@ body{
 
   /* Reduce top spacing (avoid huge gap) */
   body {
-    padding-top: 50px !important;
+    padding-top: 100px !important;
   }
 
   /* Fix floating buttons */
@@ -643,6 +643,290 @@ body{
   .stat-value { font-size: 22px; }
   .stat-label { font-size: 12px; }
 }
+/* SERVICE BOX GRID */
+.service-box {
+  background: rgba(255,255,255,0.85);
+  padding: 22px 18px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid rgba(11,115,122,0.25);
+  box-shadow: 0 6px 22px rgba(11,115,122,0.18);
+  transition: 0.3s;
+  animation: shineGlow 4s infinite ease-in-out;
+  height: 100%;
+}
 
+.service-box .icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: var(--brand-dark);
+}
 
+.service-box h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--brand-dark);
+  margin-bottom: 6px;
+}
 
+.service-box p {
+  font-size: 14px;
+  color: #334;
+  line-height: 1.5;
+}
+
+/* Hover */
+.service-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(11,115,122,0.30);
+}
+
+/* Soft glowing border animation */
+@keyframes shineGlow {
+  0% { border-color: rgba(11,115,122,0.15); }
+  50% { border-color: rgba(67,195,207,0.45); }
+  100% { border-color: rgba(11,115,122,0.15); }
+}
+.terms-box h4 {
+  font-weight: 700;
+  margin-top: 18px;
+}
+
+.terms-box p,
+.terms-box ul li {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #2e3b3c;
+}
+
+.terms-box ul {
+  margin-left: 14px;
+}
+/* ABOUT PAGE – PREMIUM SHINING CARDS */
+.about-page-section .about-card {
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 20px;
+  border: 1px solid rgba(11,115,122,0.25);
+  box-shadow: 0 0 26px rgba(11,115,122,0.28),
+              inset 0 0 18px rgba(11,115,122,0.12);
+  height: 100%;                  /* === FIX SAME HEIGHT === */
+  transition: 0.3s ease;
+}
+
+.about-page-section .about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 36px rgba(11,115,122,0.45),
+              inset 0 0 22px rgba(11,115,122,0.18);
+}
+
+.about-page-section h4 {
+  font-weight: 700;
+  color: var(--brand-dark);
+  margin-bottom: 10px;
+}
+
+.about-page-section ul {
+  padding-left: 18px;
+}
+
+.about-page-section li {
+  margin-bottom: 6px;
+  color: #06383a;
+  font-weight: 500;
+}
+body.terms-page {
+  background: linear-gradient(180deg,#f9ffff 0,#eefafa 100%) !important;
+}
+
+.terms-page .hero-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--brand-dark);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.terms-box {
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  border: 1px solid rgba(11,115,122,0.25);
+  box-shadow: 0 0 26px rgba(11,115,122,0.28),
+              inset 0 0 18px rgba(11,115,122,0.12);
+  animation: fadeUp 0.5s ease;
+}
+
+.terms-box h4 {
+  margin-top: 22px;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--brand-dark);
+}
+
+.terms-box h2 {
+  color: var(--dark);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.terms-box p,
+.terms-box ul li {
+  font-size: 16px;
+  color: #1a3034;
+  line-height: 1.65;
+}
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(20px) }
+  to   { opacity:1; transform:translateY(0)   }
+}
+/* Hourly Package Tabs */
+.package-tabs {
+  gap: 12px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  background: rgba(255,255,255,0.4);
+  border: 1px solid rgba(11,115,122,0.25);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.25s;
+  backdrop-filter: blur(6px);
+}
+
+.tab-btn.active {
+  background: linear-gradient(90deg, var(--brand-dark), var(--brand));
+  color: white;
+  box-shadow: 0 0 18px rgba(11,115,122,0.35);
+  transform: translateY(-2px);
+}
+
+/* Hourly Cards Same Glowing Border */
+.hour-card {
+  border: 1px solid rgba(11,115,122,0.3);
+  box-shadow: 0 0 24px rgba(11,115,122,0.15);
+  transition: 0.25s;
+}
+
+.hour-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 32px rgba(11,115,122,0.30);
+}
+
+/* =========================================
+   TOUR PACKAGES — CUSTOM PAGE CSS
+   Matches your aqua-glass premium theme
+========================================= */
+
+/* Tabs */
+.package-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.pkg-tab {
+  padding: 10px 22px;
+  border-radius: 12px;
+  border: 1px solid rgba(11,115,122,0.28);
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(10px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.pkg-tab.active {
+  background: linear-gradient(90deg, var(--brand-dark), var(--brand));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 6px 16px rgba(11,115,122,0.28);
+}
+
+/* Left Form Blocks */
+.form-box {
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(11,115,122,0.25);
+  box-shadow: 0 8px 24px rgba(11,115,122,0.18);
+}
+
+/* Right Price Box */
+.price-box {
+  padding: 26px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(11,115,122,0.25);
+  box-shadow: 0 8px 26px rgba(11,115,122,0.25);
+}
+
+.price-value {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--brand-dark);
+  margin-top: 10px;
+}
+
+/* Accommodation iOS Switch */
+.switch-accom {
+  position: relative;
+  width: 60px;
+  height: 32px;
+  display: inline-block;
+}
+
+.switch-accom input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #d7eeee;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 3px;
+  top: 3px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  transition: .3s;
+}
+
+input:checked + .slider {
+  background: linear-gradient(90deg, var(--brand-dark), var(--brand));
+}
+
+input:checked + .slider:before {
+  transform: translateX(28px);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .price-box {
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .pkg-tab {
+    padding: 8px 15px;
+    font-size: 13px;
+  }
+}
