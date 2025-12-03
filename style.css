@@ -62,9 +62,9 @@ body{
 }
 
 .navbar-brand .logo {
-  width: 100px;
-  height: 100px;
-  padding: 5px;
+  width: 70px;
+  height: 70px;
+  padding: 3px;
   border-radius: 50%;
   background: #ffffff;
   box-shadow: 0 4px 16px rgba(11,115,122,0.25);
@@ -309,3 +309,4 @@ body{
   padding-left: 12px;
   padding-right: 12px;
 }
+
