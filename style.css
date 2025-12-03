@@ -177,6 +177,49 @@ body{
 @keyframes floatY{0%{transform:translateY(0)}50%{transform:translateY(-28px)}100%{transform:translateY(0)}}
 @keyframes floatX{0%{transform:translateX(0)}50%{transform:translateX(32px)}100%{transform:translateX(0)}}
 @keyframes sideShift{0%{transform:translateX(0)}50%{transform:translateX(45px)}100%{transform:translateX(0)}}
+/* ==========================================
+   EXTRA SMALL SCREEN FIX (iPhone SE, 320px)
+   ========================================== */
+@media (max-width: 360px) {
+
+  /* Smaller Logo */
+  .navbar-logo-wrap .logo {
+    width: 32px !important;
+    height: 32px !important;
+    padding: 2px !important;
+  }
+
+  /* Smaller brand text */
+  .brand-mobile-text strong {
+    font-size: 14px !important;
+  }
+  .brand-mobile-text small a {
+    font-size: 12px !important;
+  }
+
+  /* Reduce top spacing (avoid huge gap) */
+  body {
+    padding-top: 118px !important;
+  }
+
+  /* Fix floating buttons */
+  .bottom-floating {
+    gap: 6px !important;
+    bottom: 12px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .bf-btn {
+    padding: 6px 10px !important;
+    border-radius: 8px !important;
+    font-size: 12px !important;
+  }
+
+  .bf-btn.call i,
+  .bf-btn.wa i {
+    font-size: 13px !important;
+  }
+}
 
 /* Hero Section */
 .hero{
