@@ -350,5 +350,38 @@ body{
     background: #25d366;
   }
 }
+.btn-whatsapp {
+  background: #25d366;
+  border: none;
+  padding: 14px 26px;
+  border-radius: 14px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.4px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.25s ease;
+}
+
+.btn-whatsapp i {
+  font-size: 20px;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5c;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(37, 211, 102, 0.45);
+}
+
+.btn-whatsapp:active {
+  transform: translateY(-1px);
+}
+
 
 
