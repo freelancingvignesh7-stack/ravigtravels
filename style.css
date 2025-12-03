@@ -419,4 +419,227 @@ body{
 .btn-whatsapp:active {
   transform: translateY(-1px);
 }
+/* ================================
+      AUTO-SCROLLING REVIEW MARQUEE
+================================ */
+.reviews-marquee-section {
+  padding: 50px 0;
+  background: #f4fdfd;
+}
 
+.reviews-marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 18px;
+  animation: scrollMarquee 38s linear infinite;
+}
+
+.marquee-card {
+  min-width: 260px;
+  max-width: 260px;
+  background: #ffffffea;
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 6px 20px rgba(11,115,122,0.14);
+  border: 1px solid rgba(11,115,122,0.12);
+  font-size: 15px;
+  line-height: 1.55;
+  color: #234;
+  flex-shrink: 0;
+}
+
+.marquee-card span {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--brand-dark);
+}
+
+/* Smooth infinite scroll */
+@keyframes scrollMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pause on hover (desktop only) */
+.reviews-marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Smaller screens (iPhone SE, 320px) */
+@media (max-width: 360px) {
+  .marquee-card {
+    min-width: 210px;
+    max-width: 210px;
+    font-size: 14px;
+    padding: 14px 16px;
+  }
+}
+/* ================================
+      GOOGLE RATING CARD
+================================ */
+.google-rating-box {
+  background: #ffffffdd;
+  backdrop-filter: blur(6px);
+  border-radius: 18px;
+  padding: 20px 24px;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  border: 1px solid rgba(11,115,122,0.10);
+}
+
+.google-logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.rating-number {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--brand-dark);
+  line-height: 1;
+}
+
+.rating-stars {
+  font-size: 22px;
+  color: #fcbf00;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+.rating-sub {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #355;
+}
+
+/* ================================
+      AUTO-SCROLLING MARQUEE
+================================ */
+.reviews-marquee-section {
+  padding: 50px 0;
+  background: #f4fdfd;
+}
+
+.reviews-marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 18px;
+  animation: scrollMarquee 10s linear infinite;
+}
+
+.marquee-card {
+  min-width: 260px;
+  max-width: 260px;
+  background: #ffffffea;
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 6px 20px rgba(11,115,122,0.14);
+  border: 1px solid rgba(11,115,122,0.12);
+  font-size: 15px;
+  line-height: 1.55;
+  color: #234;
+  flex-shrink: 0;
+}
+
+.marquee-card span {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--brand-dark);
+}
+
+@keyframes scrollMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Pause on hover (desktop) */
+.reviews-marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* iPhone SE / small screens */
+@media (max-width: 360px) {
+  .google-rating-box {
+    padding: 16px 18px;
+  }
+  .google-logo {
+    width: 50px;
+  }
+  .rating-number {
+    font-size: 38px;
+  }
+  .marquee-card {
+    min-width: 200px;
+  }
+}
+/* =====================================================
+      TWO SMALL INFO CARDS (SINCE 2018 / 500+ TRIPS)
+===================================================== */
+
+.stats-box-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: rgba(255,255,255,0.85);
+  border-radius: 14px;
+  padding: 14px 22px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(11,115,122,0.18);
+  border: 1px solid rgba(11,115,122,0.15);
+  animation: floatPulse 2s ease-in-out infinite;
+  backdrop-filter: blur(8px);
+  min-width: 140px;
+}
+
+.stat-value {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--brand-dark);
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #345;
+  margin-top: 3px;
+  letter-spacing: 0.3px;
+}
+
+/* Animated floating effect */
+@keyframes floatPulse {
+  0% { transform: translateY(0); box-shadow: 0 6px 20px rgba(11,115,122,0.18); }
+  50% { transform: translateY(-6px); box-shadow: 0 10px 26px rgba(11,115,122,0.28); }
+  100% { transform: translateY(0); box-shadow: 0 6px 20px rgba(11,115,122,0.18); }
+}
+
+/* iPhone SE fix */
+@media (max-width: 360px) {
+  .stat-card {
+    min-width: 120px;
+    padding: 12px 18px;
+  }
+  .stat-value { font-size: 22px; }
+  .stat-label { font-size: 12px; }
+}
