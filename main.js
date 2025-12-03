@@ -130,3 +130,28 @@ Notes: ${data.additional}
     return false;
   });
 });
+/* ------------------------------------------------
+   Sticky Header — Hide on Scroll Down, Show on Scroll Up
+---------------------------------------------------*/
+
+let lastScroll = 0;
+const header = document.querySelector(".site-header");
+
+window.addEventListener("scroll", function () {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll <= 0) {
+    header.style.transform = "translateY(0)";
+    return;
+  }
+
+  if (currentScroll > lastScroll) {
+    // scrolling down → hide header
+    header.style.transform = "translateY(-120px)";
+  } else {
+    // scrolling up → show header
+    header.style.transform = "translateY(0)";
+  }
+
+  lastScroll = currentScroll;
+});
