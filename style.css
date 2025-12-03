@@ -20,7 +20,7 @@
 body{
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue";
   margin:0;
-  padding-top: 80px !important; /* FIXED HEADER PUSH */
+  padding-top: 70px !important; /* FIXED HEADER PUSH */
   background: linear-gradient(180deg,#f9ffff 0,#eefafa 100%);
   color:var(--dark);
   -webkit-font-smoothing:antialiased;
@@ -241,7 +241,7 @@ body{
 
   /* Reduce top spacing (avoid huge gap) */
   body {
-    padding-top: 80px !important;
+    padding-top: 70px !important;
   }
 
   /* Fix floating buttons */
@@ -643,4 +643,5 @@ body{
   .stat-value { font-size: 22px; }
   .stat-label { font-size: 12px; }
 }
+
 
