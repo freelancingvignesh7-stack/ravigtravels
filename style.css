@@ -63,78 +63,98 @@ body{
   100% { background-position: 0% 50%; }
 }
 
-/* =============================
-   MOBILE HEADER (FINAL VERSION)
-   ============================= */
+/* HEADER ALIGNMENT FIX — CLEANEST VERSION */
 .navbar-logo-wrap {
   display: flex;
   align-items: center;
-  margin-right: 12px;
+  margin-right: 10px;
 }
 
 .navbar-logo-wrap .logo {
   width: 80px;
   height: 80px;
-  margin-left: 8px;
+  padding: 0px !important; /* as you asked */
   border-radius: 50%;
   background: #ffffff;
-  padding: 0px;
-  box-shadow: 0 4px 12px rgba(11,115,122,0.25);
+  box-shadow: 0 4px 10px rgba(11,115,122,0.25);
   object-fit: contain;
 }
 
-.brand-mobile-text {
-  line-height: 1.1;
+/* Brand block */
+.brand-block {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
 }
 
-.brand-mobile-text strong {
-  font-size: 16px;
+.brand-title {
+  font-size: 30px;
   font-weight: 700;
   color: var(--brand-dark);
+  white-space: nowrap;
 }
 
-.brand-mobile-text small a {
+.brand-phones {
   font-size: 13px;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.brand-phones a {
+  color: var(--brand-dark);
   text-decoration: none;
+}
+
+.brand-phones .divider {
   color: var(--brand-dark);
 }
 
-/* Toggler styling */
+/* Toggler */
 .navbar-toggler {
-  border: none !important;
-  margin-right: 8px;
-  padding: 6px 8px;
-  border-radius: 10px;
+  margin-left: auto;
+  margin-right: 6px;
   background: rgba(0,0,0,0.06);
-}
-.navbar-nav {
-  padding-left: 5%;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  border-radius: 8px;
+  padding: 5px 8px;
+  border: none;
 }
 
-.navbar-toggler-icon {
-  filter: invert(40%) sepia(30%) saturate(300%) hue-rotate(140deg);
-}
-
-/* ===========
-   DESKTOP HEADER
-   (Existing Design Kept)
-   =========== */
-@media (min-width: 769px) {
+/* MOBILE RESPONSIVE — iPhone SE, SE2, SE3 READY */
+@media (max-width: 480px) {
 
   .navbar-logo-wrap .logo {
-    width: 100px;
-    height: 100px;
-    padding: 5px;
+    width: 45px !important;
+    height: 45px !important;
+    margin-left: 12px;
   }
 
-  .brand-mobile-text {
-    margin-left: 10px;
+  .brand-title {
+    font-size: 25px;
+    margin-right: 12px;
   }
 
-  .brand-mobile-text strong {
-    font-size: 22px;
+  .brand-phones {
+    font-size: 12px;
+  }
+}
+
+/* SUPER SMALL SCREENS — 320px width */
+@media (max-width: 360px) {
+
+  .navbar-logo-wrap .logo {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .brand-title {
+    font-size: 14px;
+    margin-right: 12px;
+  }
+
+  .brand-phones {
+    font-size: 11px;
   }
 }
 
@@ -152,6 +172,15 @@ body{
   color:var(--brand) !important;
   text-shadow:0 0 4px rgba(67,195,207,0.3);
   transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  .navbar-nav {
+    width: 100%;
+    padding-left: 12px;
+  }
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
 }
 
 /* Floating Shapes */
@@ -390,8 +419,3 @@ body{
 .btn-whatsapp:active {
   transform: translateY(-1px);
 }
-
-
-
-
-
