@@ -38,17 +38,25 @@ body{
 .top-phone-bar a{color:#fff;text-decoration:none}
 
 /* HEADER — Animated background */
-.site-header{
-  background: linear-gradient(120deg, #ffffffcc, #e8fafbcc, #ffffffcc);
-  background-size: 300% 300%;
-  animation: headerGradient 14s ease infinite;
-  backdrop-filter: blur(8px);
-  padding:14px 0;
-  box-shadow:var(--shadow-soft);
-  position:fixed;
-  top:0; left:0; width:100%;
-  z-index:20;
+.site-header {
+  background: linear-gradient(
+      135deg,
+      rgba(11, 115, 122, 0.22),
+      rgba(11, 115, 122, 0.10),
+      rgba(255, 255, 255, 0.65)
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 14px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  box-shadow: 0 4px 20px rgba(11, 115, 122, 0.25);
+  transition: all 0.3s ease;
 }
+
 @keyframes headerGradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -382,6 +390,7 @@ body{
 .btn-whatsapp:active {
   transform: translateY(-1px);
 }
+
 
 
 
