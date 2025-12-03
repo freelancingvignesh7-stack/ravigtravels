@@ -308,3 +308,41 @@ body{
   .booking-header{order:2}
   .booking-form{order:1}
 }
+/* ============================================
+   FLOATING BUTTON FIX FOR VERY SMALL SCREENS
+   Works perfectly on iPhone SE / 320px width
+===============================================*/
+@media (max-width: 360px) {
+  .bottom-floating {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 14px !important;
+    gap: 8px !important;
+  }
+
+  .bf-btn {
+    flex-direction: column; /* icon up, text down */
+    align-items: center;
+    justify-content: center;
+    width: 70px;             /* fixed width */
+    height: 70px;            /* perfect circle feel */
+    border-radius: 14px;
+    padding: 6px 0 !important;
+    font-size: 12px !important;
+    line-height: 14px;
+  }
+
+  .bf-btn i {
+    font-size: 18px !important;
+    margin-bottom: 3px;
+  }
+
+  .bf-btn.call {
+    background: #000;
+  }
+
+  .bf-btn.wa {
+    background: #25d366;
+  }
+}
+
