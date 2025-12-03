@@ -63,26 +63,28 @@
 
 
 
-  <!-- header / navigation -->
   <header class="site-header">
     <nav class="navbar navbar-expand-lg container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="images/logo.png" alt="Ravi G Tours and Travels logo" class="logo">
-        <div class="brand-text">
-          <strong>Ravi G Tours and Travels</strong><br>
-          <small class="text-muted">
-    <a href="tel:+919944165207" style="text-decoration:none;color:inherit;">
-      📞 +91 99441 65207
-    </a>
-  </small>
 
-        </div>
+      <!-- LEFT: Logo -->
+      <a href="index.html" class="navbar-logo-wrap">
+        <img src="images/logo.png" class="logo" alt="Ravi G Tours and Travels">
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <!-- MIDDLE: Brand Text -->
+      <div class="brand-mobile-text">
+        <strong>Ravi G Tours and Travels</strong><br>
+        <small>
+          <a href="tel:+919944165207">📞 +91 99441 65207</a>
+        </small>
+      </div>
+
+      <!-- RIGHT: Toggler -->
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
+      <!-- MENU ITEMS -->
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
@@ -90,11 +92,13 @@
           <li class="nav-item"><a class="nav-link" href="hourly-package.html">Hourly Package</a></li>
           <li class="nav-item"><a class="nav-link" href="tour-packages.html">Tour Packages</a></li>
           <li class="nav-item"><a class="nav-link" href="about-us.html">About us</a></li>
-          <li class="nav-item"><a class="nav-link" href="terms.html">Terms &amp; Conditions</a></li>
         </ul>
       </div>
+
     </nav>
   </header>
+
+
 
   <!-- animated decorative shapes (CSS only - dark aqua) -->
   <div class="float-shapes" aria-hidden="true">
@@ -103,12 +107,7 @@
     <span class="shape dot d1"></span>
     <span class="shape line l1"></span>
   </div>
-  <div class="float-shapes" aria-hidden="true">
-    <span class="shape circle c1"></span>
-    <span class="shape circle c2"></span>
-    <span class="shape dot d1"></span>
-    <span class="shape line l1"></span>
-  </div>
+
 
   <!-- BOOKING FORM – TOP & CENTERED -->
   <section id="booking" class="booking-section py-5" style="padding-top:18px;">
@@ -302,6 +301,3 @@
   <script src="main.js"></script>
 </body>
 </html>
-
-
-
