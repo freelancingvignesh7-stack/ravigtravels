@@ -78,7 +78,7 @@ body{
   margin-left: 8px;
   border-radius: 50%;
   background: #ffffff;
-  padding: 5px;
+  padding: 0px;
   box-shadow: 0 4px 12px rgba(11,115,122,0.25);
   object-fit: contain;
 }
@@ -199,7 +199,7 @@ body{
   .navbar-logo-wrap .logo {
     width: 32px !important;
     height: 32px !important;
-    padding: 2px !important;
+    padding: px !important;
   }
 
   /* Smaller brand text */
@@ -390,6 +390,7 @@ body{
 .btn-whatsapp:active {
   transform: translateY(-1px);
 }
+
 
 
 
