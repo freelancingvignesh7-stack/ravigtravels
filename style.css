@@ -149,7 +149,7 @@ body{
   }
 
   .brand-title {
-    font-size: 14px;
+    font-size: 25px;
     margin-right: 12px;
   }
 
@@ -419,3 +419,4 @@ body{
 .btn-whatsapp:active {
   transform: translateY(-1px);
 }
+
