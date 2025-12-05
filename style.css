@@ -366,10 +366,10 @@ body{
     flex-direction: column; /* icon up, text down */
     align-items: center;
     justify-content: center;
-    width: 70px;             /* fixed width */
-    height: 70px;            /* perfect circle feel */
+    width: 100px;             /* fixed width */
+    height: 40px;            /* perfect circle feel */
     border-radius: 14px;
-    padding: 6px 0 !important;
+    padding: 12px 12px;
     font-size: 12px !important;
     line-height: 14px;
   }
