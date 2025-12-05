@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hourly Package – Ravi G Tours and Travels</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body class="terms-page">
+
+<!-- HEADER -->
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg container">
+
+    <a href="index.html" class="navbar-logo-wrap">
+      <img src="images/logo.png" class="logo" alt="Ravi G Tours and Travels">
+    </a>
+
+    <div class="brand-block">
+      <div class="brand-title">Ravi G Tours and Travels</div>
+      <div class="brand-phones">
+        <a href="tel:+919944165207" style="text-decoration:none;color:inherit;">📞 99441 65207</a>
+        <span class="divider">|</span>
+        <a href="tel:+919994467675" style="text-decoration:none;color:inherit;">📞 99944 67675</a>
+      </div>
+    </div>
+
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link active" href="hourly-package.html">Hourly Package</a></li>
+        <li class="nav-item"><a class="nav-link" href="tour-packages.html">Tour Packages</a></li>
+        <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="terms-and-conditions.html">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+  </nav>
+</header>
+
+<!-- Floating shapes -->
+<div class="float-shapes">
+  <span class="shape circle c1"></span>
+  <span class="shape circle c2"></span>
+  <span class="shape dot d1"></span>
+  <span class="shape line l1"></span>
+</div>
+
+<!-- HOURLY PACKAGES -->
+<section class="py-5">
+  <div class="container">
+
+    <h2 class="hero-title text-center mb-3">Coimbatore City Local Packages</h2>
+
+    <!-- TABS -->
+    <div class="package-tabs d-flex justify-content-center mb-4">
+      <div class="tab-btn active" data-tab="8">
+        8 Hrs / 80 Km
+      </div>
+      <div class="tab-btn" data-tab="10">
+        10 Hrs / 100 Km
+      </div>
+    </div>
+
+    <!-- PACKAGES GRID -->
+    <div class="row g-4" id="packageGrid"></div>
+
+    <div class="mt-4 text-center small text-muted">
+      <p>• Parking & Toll extra</p>
+      <p>• KM & Time calculated Office → Office</p>
+      <p>• Night driving after 10 PM will include driver allowance</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer py-4">
+  <div class="container">
+    <div class="row gy-3">
+
+      <div class="col-md-4">
+        <h5>Ravi G Tours and Travels</h5>
+        <p>M138, TNHP Colony, Phase 2, Vellikener, Thudiyalur<br>Coimbatore, TN 641029</p>
+        <p>MSME - UDYAM-TN-03-0068191</p>
+      </div>
+
+      <div class="col-md-4">
+        <h6>Contact</h6>
+        <p>📞 99441 65207</p>
+        <p>📞 99944 67675</p>
+        <p>✉️ info@ravigtravels.com</p>
+      </div>
+
+      <div class="col-md-4">
+        <h6>Quick Links</h6>
+        <ul class="footer-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="tour-packages.html">Tour Packages</a></li>
+          <li><a href="hourly-package.html">Hourly Package</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-3 small">
+      © 2025 Ravi G Tours and Travels — All Rights Reserved
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Buttons -->
+<div class="bottom-floating">
+  <a class="bf-btn call" href="tel:+919944165207"><i class="fa fa-phone"></i> Call</a>
+  <a class="bf-btn wa" href="#" id="quickWA"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// PRICE DATA
+const pkg8 = [
+  {name:"Swift Dzire A/C", cat:"Sedan", price:2800, exHr:300, km:13},
+  {name:"Toyota Etios A/C", cat:"Sedan", price:2800, exHr:300, km:13},
+  {name:"Mahindra Xylo", cat:"SUV", price:3700, exHr:300, km:15},
+  {name:"Innova A/C", cat:"MPV", price:3700, exHr:300, km:15},
+  {name:"Innova Crysta", cat:"Premium MPV", price:4500, exHr:500, km:16},
+  {name:"Tempo Traveller A/C", cat:"TT 12/14 Seater", price:5200, exHr:500, km:20},
+];
+
+const pkg10 = [
+  {name:"Swift Dzire A/C", cat:"Sedan", price:3000, exHr:300, km:13},
+  {name:"Toyota Etios A/C", cat:"Sedan", price:3000, exHr:300, km:13},
+  {name:"Mahindra Xylo", cat:"SUV", price:4000, exHr:300, km:15},
+  {name:"Innova A/C", cat:"MPV", price:4000, exHr:300, km:15},
+  {name:"Innova Crysta", cat:"Premium MPV", price:5000, exHr:500, km:16},
+  {name:"Tempo Traveller A/C", cat:"TT 12/14 Seater", price:5500, exHr:500, km:20},
+];
+
+function renderPackages(data, hours, km) {
+  const container = document.getElementById("packageGrid");
+  container.innerHTML = "";
+
+  data.forEach(v => {
+    const html = `
+    <div class="col-md-4">
+      <div class="hour-card about-card p-4 text-center">
+        <h4>${v.name}</h4>
+        <p class="text-muted">${v.cat}</p>
+        <hr>
+        <p><strong>${hours} Hrs / ${km} KM:</strong> ₹${v.price}</p>
+        <p><strong>Extra Hour:</strong> ₹${v.exHr}</p>
+        <p><strong>Per Km:</strong> ₹${v.km}</p>
+
+        <a href="https://wa.me/919944165207?text=${encodeURIComponent(
+          `Hourly Package Booking:
+Vehicle: ${v.name}
+Package: ${hours} Hrs / ${km} Km
+Price: ₹${v.price}
+Extra Hour: ₹${v.exHr}
+Per Km: ₹${v.km}
+Please confirm availability.`)}"
+        class="tab-btn active" target="_blank">
+          Book Now
+        </a>
+      </div>
+    </div>`;
+    container.innerHTML += html;
+  });
+}
+
+// DEFAULT: 8-hour
+renderPackages(pkg8, 8, 80);
+
+// TAB SWITCH
+document.querySelectorAll(".tab-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const tab = btn.getAttribute("data-tab");
+
+    if (tab == "10") renderPackages(pkg10, 10, 100);
+    else renderPackages(pkg8, 8, 80);
+  });
+});
+</script>
+
+</body>
+</html>

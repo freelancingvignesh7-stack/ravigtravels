@@ -56,54 +56,50 @@
   }
   </script>
 </head>
-<body>
+
+<body class="terms-page">
   <!-- GTM (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-
-
   <header class="site-header">
-  <nav class="navbar navbar-expand-lg container">
+    <nav class="navbar navbar-expand-lg container">
 
-    <!-- LEFT: Logo -->
-    <a href="index.html" class="navbar-logo-wrap">
-      <img src="images/logo.png" class="logo" alt="Ravi G Tours and Travels">
-    </a>
+      <!-- LEFT: Logo -->
+      <a href="index.html" class="navbar-logo-wrap">
+        <img src="images/logo.png" class="logo" alt="Ravi G Tours and Travels">
+      </a>
 
-    <!-- MIDDLE: Name + phone numbers -->
-    <div class="brand-block">
-      <div class="brand-title">Ravi G Tours and Travels</div>
+      <!-- MIDDLE: Name + phone numbers -->
+      <div class="brand-block">
+        <div class="brand-title">Ravi G Tours and Travels</div>
 
-      <div class="brand-phones">
-        <a href="tel:+919944165207" style="text-decoration:none;color:inherit;">📞 99441 65207</a>
-        <span class="divider">|</span>
-        <a href="tel:+919994467675" style="text-decoration:none;color:inherit;">📞 99944 67675</a>
+        <div class="brand-phones">
+          <a href="tel:+919944165207" style="text-decoration:none;color:inherit;">📞 99441 65207</a>
+          <span class="divider">|</span>
+          <a href="tel:+919994467675" style="text-decoration:none;color:inherit;">📞 99944 67675</a>
+        </div>
       </div>
-    </div>
 
-    <!-- RIGHT: Toggler -->
-    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- RIGHT: Toggler -->
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- MENU -->
-    <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Service Page</a></li>
-        <li class="nav-item"><a class="nav-link" href="hourly-package.html">Hourly Package</a></li>
-        <li class="nav-item"><a class="nav-link" href="tour-packages.html">Tour Packages</a></li>
-        <li class="nav-item"><a class="nav-link" href="about-us.html">About us</a></li>
+      <!-- MENU -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="hourly-package.html">Hourly Package</a></li>
+          <li class="nav-item"><a class="nav-link" href="tour-packages.html">Tour Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="about-us.html">About us</a></li>
           <li class="nav-item"><a class="nav-link" href="terms-and-conditions.html">Terms and Conditions</a></li>
-      </ul>
-    </div>
+        </ul>
+      </div>
 
-  </nav>
-</header>
-
-
-
+    </nav>
+  </header>
 
   <!-- animated decorative shapes (CSS only - dark aqua) -->
   <div class="float-shapes" aria-hidden="true">
@@ -113,130 +109,137 @@
     <span class="shape line l1"></span>
   </div>
 
-
   <!-- BOOKING FORM – TOP & CENTERED -->
-  <section id="booking" class="booking-section py-5" style="padding-top:18px;">
-    <div class="container">
 
 
-      <!-- HERO -->
-      <section class="hero py-5">
-        <div class="container text-center">
-          <h1 class="hero-title">Premium Taxi Service from Coimbatore</h1>
-          <p class="hero-lead">Outstation • Airport Transfers • Local & Tourist Trips — Clean cars • Verified drivers • 24/7 support</p>
-          <div class="hero-cta">
-            <button class="btn btn-dark btn-lg" onclick="scrollToBooking()">Book Your Trip</button>
-          </div>
+      <section id="booking" class="booking-section py-5" style="padding-top:18px;">
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="hero py-5">
+      <div class="container text-center">
+        <h1 class="hero-title">Premium Taxi Service from Coimbatore</h1>
+        <p class="hero-lead">Outstation • Airport Transfers • Local & Tourist Trips — Clean cars • Verified drivers • 24/7 support</p>
+      </div>
+
+      <!-- Trip Type Tabs -->
+      <div class="col-12 mb-3">
+        <div class="package-tabs">
+          <button type="button" class="pkg-tab active" data-trip="round">Round Trip</button>
+          <button type="button" class="pkg-tab" data-trip="drop">Drop Trip</button>
         </div>
-      </section>
-      <!-- PERFECTLY CENTERED FORM BOX -->
-      <div class="row justify-content-center">
-        <div class="col-lg-8 col-md-10">
+        <input type="hidden" id="tripType" name="tripType" value="round">
+      </div>
+    </section>
 
-          <form id="bookingForm" class="booking-form p-4" style="background:#ffffffdd;border-radius:14px;box-shadow:0 8px 25px rgba(0,0,0,0.07);backdrop-filter:blur(6px);">
+    <!-- FORM -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
 
-            <div class="row g-2">
-              <div class="col-sm-6">
-                <label class="form-label">Name</label>
-                <input name="name" id="name" class="form-control" required>
-              </div>
+        <form id="bookingForm" class="booking-form p-4">
 
-              <div class="col-sm-6">
-                <label class="form-label">Phone</label>
-                <input name="phone" id="phone" class="form-control" placeholder="+91 9xxxxxxxxx" required>
-              </div>
+          <div class="row g-2">
 
-              <div class="col-sm-6">
-                <label class="form-label">Pickup Location</label>
-                <input name="pickup" id="pickup" class="form-control" required>
-              </div>
+            <div class="col-sm-6">
+              <label class="form-label">Name</label>
+              <input id="name" class="form-control" required>
+            </div>
 
-              <div class="col-sm-6">
-                <label class="form-label">Drop Location</label>
-                <input name="drop" id="drop" class="form-control" required>
-              </div>
+            <div class="col-sm-6">
+              <label class="form-label">Phone</label>
+              <input id="phone" class="form-control" required>
+            </div>
 
-              <div class="col-12">
-                <label class="form-label">Intermediate Locations (optional)</label>
-                <input name="intermediate" id="intermediate" class="form-control" placeholder="Example: Ooty, Kodaikanal...">
-                <small class="form-notes"><i class="fas fa-info-circle"></i> Add stops to get a tailored route.</small>
-              </div>
+            <div class="col-sm-6">
+              <label class="form-label">Pickup Location</label>
+              <input id="pickup" class="form-control" required>
+            </div>
 
-              <div class="col-md-4">
-                <label class="form-label">Pickup Date</label>
-                <input type="date" name="pickupDate" id="pickupDate" class="form-control" required>
-              </div>
+            <div class="col-sm-6">
+              <label class="form-label">Drop Location</label>
+              <input id="drop" class="form-control" required>
+            </div>
 
-              <div class="col-md-4">
-                <label class="form-label">Pickup Time</label>
-                <input type="time" name="pickupTime" id="pickupTime" class="form-control" required>
-              </div>
+            <div class="col-12">
+              <label id="intermediateLabel" class="form-label">Intermediate Locations (optional)</label>
+              <input id="intermediate" class="form-control">
+            </div>
 
-              <div class="col-md-4">
-                <label class="form-label">Drop Date (optional)</label>
-                <input type="date" name="dropDate" id="dropDate" class="form-control">
-                <div id="durationDisplay" class="duration-display mt-1"></div>
-              </div>
+            <div class="col-md-4">
+              <label class="form-label">Pickup Date</label>
+              <input type="date" id="pickupDate" class="form-control" required>
+            </div>
 
-              <div class="col-md-8">
-                <label class="form-label">Select Vehicle Type</label>
-                <select name="vehicle" id="vehicle" class="form-select" required>
-                  <option value="">-- Choose a Vehicle --</option>
-                  <optgroup label="Sedan Cars (2–4 pax)">
-                    <option value="Dzire">Swift Dzire</option>
-                    <option value="Etios">Toyota Etios</option>
-                  </optgroup>
-                  <optgroup label="SUVs / MPVs (6–7 pax)">
-                    <option value="Ertiga">Maruti Ertiga</option>
-                    <option value="Innova">Toyota Innova</option>
-                    <option value="Crysta">Toyota Crysta</option>
+            <div class="col-md-4">
+              <label class="form-label">Pickup Time</label>
+              <input type="time" id="pickupTime" class="form-control" required>
+            </div>
 
-                  </optgroup>
-                  <optgroup label="Vans & Travellers (12–18 pax)">
-                    <option value="Urbania">Urbania Van</option>
-                    <option value="TT-AC">AC Tempo Traveller</option>
-                  </optgroup>
-                </select>
-              </div>
+            <div class="col-md-4">
+              <label id="dropDateLabel" class="form-label">Drop Date (optional)</label>
+              <input type="date" id="dropDate" class="form-control">
+              <div id="durationDisplay" class="mt-1"></div>
+            </div>
 
-              <div class="col-md-4">
-                <label class="form-label">Passengers</label>
-                <input type="number" name="passengers" id="passengers" class="form-control" min="1" value="1" required>
-              </div>
+            <div class="col-md-4">
+              <label class="form-label">Drop Time (optional)</label>
+              <input type="time" id="dropTime" class="form-control">
+            </div>
 
-              <!-- Accommodation toggle (iPhone-style) -->
-              <div class="col-12 d-flex align-items-center gap-3">
-                <label class="form-label mb-0">Accommodation Needed</label>
-                <div class="accom-switch">
-                  <input type="checkbox" id="accom" class="accom-input">
-                  <label for="accom" class="accom-toggle" aria-hidden="true">
-                    <span class="accom-knob"></span>
-                  </label>
-                  <span id="accomLabel" class="ms-2 text-muted">No</span>
-                </div>
-              </div>
+            <div class="col-md-8">
+              <label class="form-label">Select Vehicle Type</label>
+              <select id="vehicle" class="form-select" required>
+                <option value="">-- Choose a Vehicle --</option>
+                <optgroup label="Sedan">
+                  <option value="Dzire">Swift Dzire</option>
+                  <option value="Etios">Toyota Etios</option>
+                </optgroup>
+                <optgroup label="SUV / MPV">
+                  <option value="Ertiga">Maruti Ertiga</option>
+                  <option value="Innova">Toyota Innova</option>
+                  <option value="Crysta">Innova Crysta</option>
+                </optgroup>
+                <optgroup label="Traveller">
+                  <option value="Urbania">Urbania</option>
+                  <option value="TT-AC">Tempo Traveller AC</option>
+                </optgroup>
+              </select>
+            </div>
 
-              <div class="col-12">
-                <label class="form-label">Special Requirements</label>
-                <textarea name="additional" id="additional" class="form-control" rows="2" placeholder="Any special requests..."></textarea>
-              </div>
+            <div class="col-md-4">
+              <label class="form-label">Passengers</label>
+              <input type="number" id="passengers" class="form-control" min="1" value="1" required>
+            </div>
 
-              <div class="col-12 text-center mt-3">
-                <button type="submit" class="btn btn-whatsapp px-4 py-2">
-                  <i class="fab fa-whatsapp"></i> Book Now via WhatsApp
-                </button>
+            <div class="col-12 d-flex align-items-center gap-3">
+              <label class="form-label mb-0">Accommodation Needed</label>
+              <div class="accom-switch">
+                <input type="checkbox" id="accom" class="accom-input">
+                <label for="accom" class="accom-toggle"><span class="accom-knob"></span></label>
+                <span id="accomLabel" class="ms-2 text-muted">No</span>
               </div>
             </div>
 
-          </form>
+            <div class="col-12">
+              <label class="form-label">Special Requirements</label>
+              <textarea id="additional" class="form-control" rows="2"></textarea>
+            </div>
 
-        </div>
+            <div class="col-12 text-center mt-3">
+              <button type="submit" class="btn btn-whatsapp px-4 py-2">
+                <i class="fab fa-whatsapp"></i> Book Now via WhatsApp
+              </button>
+            </div>
+
+          </div>
+
+        </form>
+
       </div>
-
     </div>
-  </section>
 
-
+  </div>
+</section>
 
   <!-- 3 x SEO paragraphs about Ravi G Tours and Travels -->
   <section class="about-home py-4">
@@ -244,112 +247,50 @@
       <p><strong>Ravi G Tours and Travels</strong> is a premium travel service based in Coimbatore offering reliable and comfortable transportation across Tamil Nadu. We specialize in outstation trips, airport transfers, tailored tour packages, and group travel solutions with experienced and verified drivers. Our priority is clean vehicles, punctual service, and a safe, memorable travel experience for every passenger.</p>
     </div>
   </section>
+
   <!-- ================================
        GOOGLE RATING + AUTO-SCROLLING REVIEWS
   ================================ -->
   <section class="reviews-marquee-section">
     <div class="container text-center">
-
-      <!-- TWO SMALL INFO BOXES -->
       <div class="stats-box-wrap">
-
-        <!-- Box 1 -->
         <div class="stat-card">
           <div class="stat-value">Since 2018</div>
           <div class="stat-label">Serving Customers</div>
         </div>
-
-        <!-- Box 2 -->
         <div class="stat-card">
           <div class="stat-value">500+</div>
           <div class="stat-label">Successful Trips</div>
         </div>
-
       </div>
 
-      <!-- ⭐ BIG GOOGLE RATING CARD -->
       <div class="google-rating-box mb-4">
         <img src="images/glogo.webp"
              class="google-logo" alt="Google Logo">
-
         <div class="rating-number">4.8</div>
         <div class="rating-stars">⭐⭐⭐⭐⭐</div>
-
       </div>
 
       <h2 class="section-title mb-4">What Our Customers Say</h2>
 
-      <!-- AUTO SCROLL MARQUEE -->
       <div class="reviews-marquee">
         <div class="marquee-track">
-
-          <div class="marquee-card">
-            ⭐⭐⭐⭐⭐
-            <p>"Safe, comfortable and memorable girls trip to Kodaikanal. Highly recommended!"</p>
-            <span>- Siny Mathew</span>
-          </div>
-
-          <div class="marquee-card">
-            ⭐⭐⭐⭐⭐
-            <p>"Very friendly team, treated us like family. Best for Coimbatore–Ooty–Kodaikanal."</p>
-            <span>- Sahitya Saripalli</span>
-          </div>
-
-          <div class="marquee-card">
-            ⭐⭐⭐⭐⭐
-            <p>"Memorable trip and very professional driver. Excellent service."</p>
-            <span>- Ramya Kandiyoor</span>
-          </div>
-
-          <div class="marquee-card">
-            ⭐⭐⭐⭐⭐
-            <p>"Affordable 4-day Ooty package. Very polite and friendly service."</p>
-            <span>- Geetha A</span>
-          </div>
-
-          <div class="marquee-card">
-            ⭐⭐⭐⭐⭐
-            <p>"Safe driving. Guru anna is very cool and friendly!"</p>
-            <span>- Gayathri Gurram</span>
-          </div>
-
-          <div class="marquee-card">
-            ⭐⭐⭐⭐⭐
-            <p>"Great service, good pricing. Very customer-friendly."</p>
-            <span>- Suga Prasad</span>
-          </div>
-
-          <div class="marquee-card">
-            ⭐⭐⭐⭐⭐
-            <p>"Friendly service and knows all tourist spots well."</p>
-            <span>- Avt Hospitality</span>
-          </div>
-
-          <div class="marquee-card">
-            ⭐⭐⭐⭐⭐
-            <p>"Amazing safe driving and reasonable price."</p>
-            <span>- Preemeswari SS</span>
-          </div>
-
-          <div class="marquee-card">
-            ⭐⭐⭐⭐⭐
-            <p>"Clean cars and very good service. Highly satisfied."</p>
-            <span>- Jayapal P</span>
-          </div>
-
-          <div class="marquee-card">
-            ⭐⭐⭐⭐⭐
-            <p>"Excellent service at a very affordable price."</p>
-            <span>- Maha Nanthakumar</span>
-          </div>
-
+          <!-- reviews (unchanged) -->
+          <div class="marquee-card">⭐⭐⭐⭐⭐<p>"Safe, comfortable and memorable girls trip to Kodaikanal. Highly recommended!"</p><span>- Siny Mathew</span></div>
+          <div class="marquee-card">⭐⭐⭐⭐⭐<p>"Very friendly team, treated us like family. Best for Coimbatore–Ooty–Kodaikanal."</p><span>- Sahitya Saripalli</span></div>
+          <div class="marquee-card">⭐⭐⭐⭐⭐<p>"Memorable trip and very professional driver. Excellent service."</p><span>- Ramya Kandiyoor</span></div>
+          <div class="marquee-card">⭐⭐⭐⭐⭐<p>"Affordable 4-day Ooty package. Very polite and friendly service."</p><span>- Geetha A</span></div>
+          <div class="marquee-card">⭐⭐⭐⭐⭐<p>"Safe driving. Guru anna is very cool and friendly!"</p><span>- Gayathri Gurram</span></div>
+          <div class="marquee-card">⭐⭐⭐⭐⭐<p>"Great service, good pricing. Very customer-friendly."</p><span>- Suga Prasad</span></div>
+          <div class="marquee-card">⭐⭐⭐⭐⭐<p>"Friendly service and knows all tourist spots well."</p><span>- Avt Hospitality</span></div>
+          <div class="marquee-card">⭐⭐⭐⭐⭐<p>"Amazing safe driving and reasonable price."</p><span>- Preemeswari SS</span></div>
+          <div class="marquee-card">⭐⭐⭐⭐⭐<p>"Clean cars and very good service. Highly satisfied."</p><span>- Jayapal P</span></div>
+          <div class="marquee-card">⭐⭐⭐⭐⭐<p>"Excellent service at a very affordable price."</p><span>- Maha Nanthakumar</span></div>
         </div>
       </div>
 
     </div>
   </section>
-
-
 
   <!-- Footer -->
   <footer class="site-footer py-4">
@@ -369,14 +310,14 @@
         </div>
 
         <div class="col-md-4">
-      <h6>Quick Links</h6>
-      <ul class="footer-links">
-        <li><a href="services.html">Services</a></li>
-        <li><a href="tour-packages.html">Tour Packages</a></li>
-        <li><a href="hourly-package.html">Hourly Package</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-      </ul>
-    </div>
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="tour-packages.html">Tour Packages</a></li>
+            <li><a href="hourly-package.html">Hourly Package</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+          </ul>
+        </div>
 
       </div>
 
