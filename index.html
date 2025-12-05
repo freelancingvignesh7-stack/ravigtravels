@@ -291,6 +291,110 @@
 
     </div>
   </section>
+  <!-- ⭐ GOOGLE REVIEWS SECTION END → PLACE THIS CAROUSEL BELOW ⭐ -->
+
+  <div class="review-carousel-wrapper">
+    <h2 class="stat-value">Customer Gallery</h2>
+
+    <div class="review-carousel" id="customerCarousel">
+        <!-- JS will insert 1–17 images here -->
+    </div>
+
+  </div>
+
+  <!-- ⭐ GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <script>
+  const container = document.getElementById("customerCarousel");
+
+  // Load 1–17 images
+  let images = [];
+  for (let i = 1; i <= 17; i++) {
+    images.push(`images/customer/${i}.jpg`);
+  }
+
+  // Duplicate images for smooth infinite loop
+  const allImages = [...images, ...images];
+
+  allImages.forEach(src => {
+    let img = document.createElement("img");
+    img.src = src;
+    img.className = "review-slide";
+    container.appendChild(img);
+  });
+
+  // GSAP infinite loop
+  let slideWidth = 168; // 150px + 18px gap = 168
+  let totalSlides = allImages.length;
+
+  gsap.to(".review-slide", {
+    x: () => `-=${slideWidth * totalSlides}`,
+    duration: 200,
+    ease: "none",
+    repeat: -1,   // infinite loop
+    modifiers: {
+      x: gsap.utils.unitize(x => {
+        return (parseFloat(x) % (slideWidth * totalSlides)) ;
+      })
+    }
+  });
+  </script>
+
+
+
+  <style>
+  /* ------------------------------
+      CONTAINER STYLE
+  ------------------------------- */
+  .review-carousel-wrapper {
+    position: relative;
+    max-width: 100%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .section-title {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  /* ------------------------------
+      CAROUSEL TRACK
+  ------------------------------- */
+  .review-carousel {
+    display: flex;
+    gap: 18px;
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  /* ------------------------------
+      IMAGE STYLING
+  ------------------------------- */
+  .review-slide {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 3px solid transparent;
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(135deg, #7c3aed, #06b6d4) border-box;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    transition: transform .3s;
+  }
+
+  .review-slide:hover {
+    transform: scale(1.05);
+  }
+
+  </style>
 
   <!-- Footer -->
   <footer class="site-footer py-4">
@@ -340,5 +444,3 @@
   <script src="main.js"></script>
 </body>
 </html>
-
-
