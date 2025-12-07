@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yourdomain.com/sitemap.xml
+# Block unnecessary system folders (edit if not needed)
+Disallow: /admin/
+Disallow: /login/
+Disallow: /temp/
+Disallow: /cgi-bin/
+
+# Prevent duplicate content crawling
+Disallow: /*?session=
+Disallow: /*?utm_source=
+Disallow: /*?utm_medium=
+Disallow: /*?utm_campaign=
+
+# Sitemap location
+Sitemap: https://ravigtravels.com/sitemap.xml

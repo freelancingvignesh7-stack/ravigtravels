@@ -23,6 +23,7 @@ body{
   padding-top: 90px; /* FIXED HEADER PUSH */
   background: linear-gradient(180deg,#f9ffff 0,#eefafa 100%);
   color:var(--dark);
+
   -webkit-font-smoothing:antialiased;
 }
 
@@ -131,7 +132,7 @@ body{
   }
 
   .brand-title {
-    font-size: 25px;
+    font-size: 15px;
     margin-right: 12px;
   }
 
@@ -149,7 +150,7 @@ body{
   }
 
   .brand-title {
-    font-size: 25px;
+    font-size: 15px;
     margin-right: 12px;
   }
 
@@ -243,24 +244,6 @@ body{
   body {
     padding-top: 100px !important;
   }
-
-  /* Fix floating buttons */
-  .bottom-floating {
-    gap: 6px !important;
-    bottom: 12px !important;
-    transform: translateX(-50%) !important;
-  }
-
-  .bf-btn {
-    padding: 6px 10px !important;
-    border-radius: 8px !important;
-    font-size: 12px !important;
-  }
-
-  .bf-btn.call i,
-  .bf-btn.wa i {
-    font-size: 13px !important;
-  }
 }
 
 /* Hero Section */
@@ -313,31 +296,6 @@ body{
 .accom-input:checked + .accom-toggle{background:linear-gradient(90deg,var(--brand-dark),var(--brand))}
 .accom-input:checked + .accom-toggle .accom-knob{transform:translateX(22px)}
 
-/* Bottom Floating Bar */
-.bottom-floating {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 16px;
-  display: flex;
-  gap: 12px;
-  background: none !important;
-  box-shadow: none !important;
-  z-index: 999;
-}
-
-@media (min-width: 768px) {
-  .bottom-floating {
-    left: auto;
-    right: 20px;
-    transform: none;
-  }
-}
-
-.bf-btn{padding:8px 12px;border-radius:10px;font-weight:700;font-size:14px;text-decoration:none}
-.bf-btn.call{background:#111;color:#fff}
-.bf-btn.wa{background:#25d366;color:#fff}
-
 /* Footer */
 .site-footer{background:#0b737a;color:#d7e9ea;padding:36px 0}
 .footer-links{list-style:none;margin:0;padding:0}
@@ -350,43 +308,14 @@ body{
   .booking-header{order:2}
   .booking-form{order:1}
 }
-/* ============================================
-   FLOATING BUTTON FIX FOR VERY SMALL SCREENS
-   Works perfectly on iPhone SE / 320px width
-===============================================*/
+
 @media (max-width: 360px) {
-  .bottom-floating {
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    bottom: 14px !important;
-    gap: 8px !important;
-  }
 
-  .bf-btn {
-    flex-direction: column; /* icon up, text down */
-    align-items: center;
-    justify-content: center;
-    width: 100px;             /* fixed width */
-    height: 40px;            /* perfect circle feel */
-    border-radius: 14px;
-    padding: 15px 20px;
-    font-size: 12px !important;
-    line-height: 14px;
-  }
-
-  .bf-btn i {
-    font-size: 18px !important;
-    margin-bottom: 3px;
-  }
-
-  .bf-btn.call {
-    background: #000;
-  }
-
-  .bf-btn.wa {
-    background: #25d366;
+  body{
+    font-size:10px !important;
   }
 }
+
 .btn-whatsapp {
   background: #25d366;
   border: none;
@@ -984,4 +913,211 @@ input:checked + .slider:before {
   color: #d00000; /* red */
   font-weight: bold;
   font-size: 18px;
+}
+
+/* ============================================================
+   FLOATING CALL & WHATSAPP BUTTONS
+   Horizontal layout • Works on all devices (220px to desktop)
+   ============================================================ */
+
+.bottom-floating {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 16px;
+  display: flex;
+  gap: 12px;
+  z-index: 999;
+  align-items: center;
+}
+
+.bf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  white-space: nowrap;
+}
+
+.bf-btn i {
+  font-size: 20px;
+}
+
+.bf-btn.call {
+  background: #111;
+  color: #fff;
+}
+
+.bf-btn.call:hover {
+  background: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.bf-btn.wa {
+  background: #25d366;
+  color: #fff;
+}
+
+.bf-btn.wa:hover {
+  background: #1ebe5c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37,211,102,0.4);
+}
+
+/* ======== TABLET & DESKTOP (768px+) ======== */
+@media (min-width: 768px) {
+  .bottom-floating {
+    left: auto;
+    right: 24px;
+    transform: none;
+    bottom: 24px;
+  }
+
+  .bf-btn {
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+
+  .bf-btn i {
+    font-size: 22px;
+  }
+}
+
+/* ======== LARGE SCREENS (1200px+) ======== */
+@media (min-width: 1200px) {
+  .bottom-floating {
+    right: 32px;
+    bottom: 32px;
+    gap: 14px;
+  }
+
+  .bf-btn {
+    padding: 16px 28px;
+    font-size: 17px;
+  }
+
+  .bf-btn i {
+    font-size: 24px;
+  }
+}
+
+/* ======== MEDIUM PHONES (430px - 767px) ======== */
+@media (max-width: 767px) {
+  .bottom-floating {
+    bottom: 14px;
+    gap: 10px;
+  }
+
+  .bf-btn {
+    padding: 11px 18px;
+    font-size: 14px;
+  }
+
+  .bf-btn i {
+    font-size: 18px;
+  }
+}
+
+/* ======== SMALL PHONES (360px - 429px) ======== */
+@media (max-width: 429px) {
+  .bottom-floating {
+    bottom: 12px;
+    gap: 8px;
+  }
+
+  .bf-btn {
+    padding: 10px 16px;
+    font-size: 13px;
+    border-radius: 12px;
+  }
+
+  .bf-btn i {
+    font-size: 17px;
+  }
+}
+
+/* ======== VERY SMALL PHONES (320px - 359px) ======== */
+@media (max-width: 359px) {
+  .bottom-floating {
+    bottom: 10px;
+    gap: 6px;
+  }
+
+  .bf-btn {
+    padding: 9px 14px;
+    font-size: 12px;
+    border-radius: 11px;
+  }
+
+  .bf-btn i {
+    font-size: 16px;
+  }
+}
+
+/* ======== EXTRA SMALL (280px - 319px) ======== */
+@media (max-width: 319px) {
+  .bottom-floating {
+    bottom: 8px;
+    gap: 5px;
+  }
+
+  .bf-btn {
+    padding: 8px 12px;
+    font-size: 11px;
+    border-radius: 10px;
+  }
+
+  .bf-btn i {
+    font-size: 15px;
+  }
+}
+
+/* ======== MINI PHONES (240px - 279px) ======== */
+@media (max-width: 279px) {
+  .bottom-floating {
+    bottom: 6px;
+    gap: 4px;
+  }
+
+  .bf-btn {
+    padding: 7px 10px;
+    font-size: 10px;
+    border-radius: 9px;
+  }
+
+  .bf-btn i {
+    font-size: 14px;
+  }
+}
+
+/* ======== SUPER TINY (220px - 239px) ======== */
+@media (max-width: 239px) {
+  .bottom-floating {
+    bottom: 5px;
+    gap: 3px;
+  }
+
+  .bf-btn {
+    padding: 6px 8px;
+    font-size: 9px;
+    border-radius: 8px;
+  }
+
+  .bf-btn i {
+    font-size: 13px;
+  }
+}
+
+/* ======== ACTIVE STATE FOR ALL SIZES ======== */
+.bf-btn:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2) !important;
 }
